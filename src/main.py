@@ -1,8 +1,8 @@
 import requests
-from grobid import process_pdf_with_grobid
+from src.grobid import process_pdf_with_grobid
 from grobid_client.grobid_client import GrobidClient
 
-URL_FILE = "../dataset/Research_Papers.txt"
+URL_FILE = "./dataset/Research_Papers.txt"
 GROBID_URL = "http://localhost:8070"
 
 
