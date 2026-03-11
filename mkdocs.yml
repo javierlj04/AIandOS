@@ -3,8 +3,7 @@ site_author: javierlj04
 site_description: AI and Open Science Documentation
 
 theme:
-  name: material
-  language: es
+  name: mkdocs
 
 nav:
   - Home: index.md
@@ -13,6 +12,4 @@ plugins:
   - search
 
 markdown_extensions:
-  - pymdownx.highlight
-  - pymdownx.superfences
   - toc
