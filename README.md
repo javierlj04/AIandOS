@@ -22,7 +22,7 @@ Clonar el repositorio:
 ### Instrucciones de ejecución con Docker
 - Tener los archivos pdf en el directorio `dataset`
 - Ejecutar el siguiente comando en la terminal en el directorio `AIandOS`:
-`sh docker compose up`
+  `docker compose up`
 - La ejecución puede tardar un par de minutos dependiendo de la cantidad de pdfs.
 La aplicación devolverá la extracción en la propia terminal (pendiente de actualizar para visualizar las figuras de los papers)
 
