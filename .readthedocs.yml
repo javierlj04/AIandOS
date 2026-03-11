@@ -6,5 +6,6 @@ mkdocs:
   configuration: mkdocs.yml
 
 build:
+  os: ubuntu-22.02
   tools:
     python: "3.12"
