@@ -1,0 +1,9 @@
+# Required
+version: 2
+
+# Build documentation with MkDocs
+mkdocs:
+  configuration: mkdocs.yml
+
+build:
+  python: "3.12"
