@@ -30,6 +30,10 @@ Para cerrar la aplicación se puede hacer usando `docker compose down`
 
 Si no se va a volver a usar la imagen creada con docker se puede eliminar usando `docker rmi aiandos-aiandos:latest`
 
+### Test
+En `Research_Papers.txt` hay una lista de url en las que se pueden descargar PDF para poner en la carpeta dataset.
+Cuando se tenga mínimo un pdf en esa carpeta se pueden seguir las Instrucciones de ejecución con Docker
+
 ### Cita preferida
 Javier de la Luna Jimenez, J. (2026). Individual Assessment 1 (Version 1.0) [Computer software]. https://github.com/javierlj04/AIandOS
 
