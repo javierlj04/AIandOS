@@ -1,0 +1,23 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Individual Assessment 1
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Javier
+    family-names: de la Luna Jimenez
+    email: javierlj04@gmail.com
+    name-particle: Javier
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.18958065
+    description: DOI de la versión 1.0
+repository-code: 'https://github.com/javierlj04/AIandOS'
+license: CC0-1.0
+commit: '1.0'
+version: '1.0'
+date-released: '2026-03-11'
