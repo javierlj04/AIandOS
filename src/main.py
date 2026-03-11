@@ -1,39 +1,31 @@
-import requests
-from src.grobid import process_pdf_with_grobid
-from grobid_client.grobid_client import GrobidClient
+import os
+import time
+from src.grobid import analyze_pdf
+from grobid_client.grobid_client import GrobidClient, ServerUnavailableException
 
-URL_FILE = "./dataset/Research_Papers.txt"
-GROBID_URL = "http://localhost:8070"
+PDF_DIR = "./dataset"
+GROBID_URL = "http://grobid:8070"
 
-
-def read_urls():
-    with open(URL_FILE) as f:
-        return [line.strip() for line in f if line.strip()]
-
+def wait_for_grobid(url, retries=10, delay=5):
+    for attempt in range(retries):
+        try:
+            client = GrobidClient(grobid_server=url)
+            return client
+        except ServerUnavailableException:
+            print(f"Grobid no disponible, reintentando en {delay}s... (Intento {attempt+1}/{retries})")
+            time.sleep(delay)
+    raise RuntimeError("No se pudo conectar con Grobid tras varios intentos.")
 
 def main():
-
-    urls = read_urls()
-    client = GrobidClient(grobid_server=GROBID_URL)
-
+    client = wait_for_grobid(GROBID_URL)
     results = []
-
-    for i, url in enumerate(urls, 1):
-
-        print(f"Processing {url}")
-
-        response = requests.get(url)
-
-        temp_pdf = f"temp{i}.pdf"
-
-        with open(temp_pdf, "wb") as f:
-            f.write(response.content)
-
-        info = process_pdf_with_grobid(temp_pdf, client)
+    pdf_files = [f for f in os.listdir(PDF_DIR) if f.lower().endswith('.pdf')]
+    for i, pdf_name in enumerate(pdf_files, 1):
+        pdf_path = os.path.join(PDF_DIR, pdf_name)
+        print(f"Procesando {pdf_path}")
+        info = analyze_pdf(pdf_path, client)
         results.append(info)
-
     print(results)
-
 
 if __name__ == "__main__":
     main()
