@@ -8,8 +8,8 @@ El repositorio permite analizar y extraer información de papers, visualizar las
 
 ### Instrucciones de instalación
 Clonar el repositorio:
-```git clone https://github.com/javierlj04/AIandOS.git```
-```cd AIandOS```
+`git clone https://github.com/javierlj04/AIandOS.git`
+`cd AIandOS`
 
 ### Requerimientos
 - Grobid
@@ -19,10 +19,10 @@ Clonar el repositorio:
   - `https://www.anaconda.com/docs/getting-started/miniconda/install`
 
 ### Instrucciones de ejecución con Docker
-Tener los archivos pdf en el directorio `dataset`
-Ejecutar el siguiente comando en la terminal en el directorio `AIandOS`:
-```docker compose up```
-La ejecución puede tardar un par de minutos dependiendo de la cantidad de pdfs.
+- Tener los archivos pdf en el directorio `dataset`
+- Ejecutar el siguiente comando en la terminal en el directorio `AIandOS`:
+`sh docker compose up`
+- La ejecución puede tardar un par de minutos dependiendo de la cantidad de pdfs.
 La aplicación devolverá la extracción en la propia terminal (pendiente de actualizar para visualizar las figuras de los papers)
 
 Para cerrar la aplicación se puede hacer usando `docker compose down` o `Crtl+C`
