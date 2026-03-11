@@ -11,4 +11,4 @@ Clonar el repositorio:
 
 ### Requerimientos
 - Grobid
-  - `docker run -rm -it -p 3035:3030 grobidOrg/grobid:0.8.2`
+  - `docker run -t --rm -p 8070:8070 lfoppiano/grobid:0.8.2`
