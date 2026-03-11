@@ -27,8 +27,8 @@ La aplicación devolverá la extracción en la propia terminal (pendiente de act
 
 Para cerrar la aplicación se puede hacer usando `docker compose down` o `Crtl + C`
 
-### Preferred citation
+### Cita preferida
 Javier de la Luna Jimenez, J. (2026). Individual Assessment 1 (Version 1.0) [Computer software]. https://github.com/javierlj04/AIandOS
 
-### If you have any issues
+### Si necesita ayuda
 https://github.com/javierlj04/AIandOS/issues
