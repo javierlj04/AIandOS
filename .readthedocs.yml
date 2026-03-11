@@ -5,5 +5,5 @@ version: 2
 mkdocs:
   configuration: mkdocs.yml
 
-build:
-  python: "3.12"
+python:
+  version: 3.12
